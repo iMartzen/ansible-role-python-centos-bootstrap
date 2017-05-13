@@ -1,4 +1,4 @@
-Ansible Role: Install Python on newly bootstrapped Ubuntu host
+Ansible Role: Install Python on newly bootstrapped Ubuntu server
 =========
 
 **Install Python on newly bootstrapped Ubuntu server**
