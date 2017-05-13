@@ -1,6 +1,6 @@
 galaxy_info:
   author: Adnan Hodzic
-  description: Install Python on newly bootstrapped Ubuntu host
+  description: Install Python on newly bootstrapped Ubuntu server
 
   license: GPLv3
 
