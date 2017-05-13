@@ -1,7 +1,7 @@
 Ansible Role: Install Python on newly bootstrapped Ubuntu host
 =========
 
-**Install Python on newly bootstrapped Ubuntu host**
+**Install Python on newly bootstrapped Ubuntu server**
 
 This Ansible role will install Python on newly bootstrapped host. This is usually
 a new host which you never even SSH-ed to.
@@ -18,9 +18,6 @@ Role Variables
 
 None.
 
-```
-enable_fact_gather: "- setup: # aka gather_facts: yes"
-```
 
 Dependencies
 ------------
@@ -31,13 +28,22 @@ Example Playbook
 ----------------
 
 ```
+# run as part of pre_tasks
 - hosts: servers
-  remote_user: ubuntu # optional
+  remote_user: ubuntu
+  become: yes
+  gather_facts: no
+  serial: 1
+
+  roles:
+    - { role: AdnanHodzic.python-ubuntu-bootstrap }
+
+- hosts: servers
+  remote_user: ubuntu
+  gather_facts: yes
   become: yes
 
-  pre_tasks:
-  roles: [ AdnanHodzic.python-ubuntu-bootstrap ]
-
+# run as part of tasks
   roles:
     ...
 ```
