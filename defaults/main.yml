@@ -1,2 +1,0 @@
----
-enable_fact_gather: "- setup: # aka gather_facts: yes"

@@ -16,8 +16,7 @@ None.
 Role Variables
 --------------
 
-Comment `enable_fact_gather` variable if you don't want to gather facts
-after this task has been executed (see: `defaults/main.yml`)
+None.
 
 ```
 enable_fact_gather: "- setup: # aka gather_facts: yes"
