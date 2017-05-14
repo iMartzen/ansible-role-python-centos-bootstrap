@@ -30,6 +30,8 @@ Dependencies
 None.
 
 Example Playbook
+
+This role was created to be run as part of pre_tasks, i.e:
 ----------------
 
 ```
