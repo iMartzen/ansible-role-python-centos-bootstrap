@@ -1,6 +1,6 @@
 ---
-# dependency for Ansible to work on new Ubuntu host
+# dependency for Ansible to work on new Centos host
 - name: If missing, install Python
-  raw: test -e /usr/bin/python || (apt -y update && apt install -y python)
+  raw: test -e /usr/bin/python || (yum -y update && yum install -y python)
   changed_when: False
 - setup: # aka gather_facts: yes
