@@ -3,10 +3,7 @@ Ansible Role: Install Python on newly bootstrapped Centos host
 
 **Install Python on newly bootstrapped Centos host**
 
-This Ansible role will install Python on newly bootstrapped host. This is usually
-a new host which you never even SSH-ed to.
-
-In order for Ansible to work, Python must be installed (if missing).
+This Ansible role will install Python on newly bootstrapped host. This is usually a new host which you never even SSH-ed to. In order for Ansible to work, Python must be installed (if missing).
 
 This role was created as part of [containerized-wordpress-project](https://github.com/AdnanHodzic/containerized-wordpress-project)
 
