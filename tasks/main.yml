@@ -1,5 +1,5 @@
 ---
-# dependency for Ansible to work on new Centos host
+# dependency for Ansible to work on new CentOS/RedHat host
 
 # Python2 support
 - name: If missing, install Python2

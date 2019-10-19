@@ -1,7 +1,7 @@
-Ansible Role: Install Python on newly bootstrapped Centos host
+Ansible Role: Install Python on newly bootstrapped CentOS/RedHat host
 =========
 
-**Install Python on newly bootstrapped Centos host**
+**Install Python on newly bootstrapped CentOS/RedHat host**
 
 This Ansible role will install Python on newly bootstrapped host. This is usually a new host which you never even SSH-ed to. In order for Ansible to work, Python must be installed (if missing).
 

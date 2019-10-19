@@ -1,6 +1,6 @@
 galaxy_info:
   author: iMartzen
-  description: Install Python on newly bootstrapped Centos server
+  description: Install Python on newly bootstrapped Centos/RedHat server
 
   license: GPLv3
 
@@ -10,6 +10,9 @@ galaxy_info:
   - name: Centos
     versions:
     - all
+  - name: RedHat
+    versions:
+    - all
 
   galaxy_tags:
   - development
@@ -17,3 +20,5 @@ galaxy_info:
   - bootstrap
   - python
   - centos
+  - redhat
+  - rhel 
