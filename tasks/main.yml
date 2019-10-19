@@ -1,6 +1,16 @@
 ---
 # dependency for Ansible to work on new Centos host
-- name: If missing, install Python
+
+# Python2 support
+- name: If missing, install Python2
   raw: test -e /usr/bin/python || (yum -y update && yum install -y python)
   changed_when: False
 - setup: # aka gather_facts: yes
+
+# Python3 
+- name: If missing, install Python3
+  raw: test -e /usr/bin/python3 || (yum -y update && yum install -y python3)
+  changed_when: False
+- setup: # aka gather_facts: yes
+
+
