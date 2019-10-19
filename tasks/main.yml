@@ -1,16 +1,36 @@
 ---
 # dependency for Ansible to work on new CentOS/RedHat host
 
-# Python2 support
+# Python2 for apt systems
+- name: If missing, install Python2
+  raw: test -e /usr/bin/python || (apt -y update && apt install -y python)
+  changed_when: False
+- setup: # aka gather_facts: yes
+  when: (ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'xenial') or
+        (ansible_distribution == 'Debian' and ansible_distribution_release == 'stretch')
+
+# Python2 for yum systems 
 - name: If missing, install Python2
   raw: test -e /usr/bin/python || (yum -y update && yum install -y python)
   changed_when: False
+  when: ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS'
 - setup: # aka gather_facts: yes
+  when: ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS'
 
-# Python3 
+
+# Python3 for apt systems 
+- name: If missing, install Python3
+  raw: test -e /usr/bin/python3 || (apt -y update && apt install -y python3)
+  changed_when: False
+- setup: # aka gather_facts: yes
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+
+# Python for yum systems 
 - name: If missing, install Python3
   raw: test -e /usr/bin/python3 || (yum -y update && yum install -y python3)
   changed_when: False
+  when: ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS'
 - setup: # aka gather_facts: yes
+  when: ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS'
 
 
