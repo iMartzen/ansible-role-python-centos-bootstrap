@@ -19,7 +19,7 @@
   changed_when: False
   when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian' 
 
-# Python for yum systems 
+# Python3 for yum systems 
 - name: If missing, install Python3 for CentOS/RedHat
   raw: test -e /usr/bin/python3 || (yum -y update && yum install -y python3)
   changed_when: False
